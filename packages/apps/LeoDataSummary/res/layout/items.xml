@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="48dp"
+    android:clickable="true" >
+
+    <ImageView
+        android:id="@+id/app_item_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:padding="4dp"
+        android:src="@drawable/gallery_photo_frame" />
+
+    <TextView
+        android:id="@+id/app_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/app_item_image"
+        android:ellipsize="end"
+        android:maxWidth="120dp"
+        android:singleLine="true"
+        android:text="@string/appname"
+        android:textColor="#000"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/app_item_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_item_name"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/app_item_image"
+        android:text="@string/uid"
+        android:textColor="#607080"
+        android:visibility="gone" />
+
+    <Switch
+        android:id="@+id/app_item_togglebutton"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:textOff=" "
+        android:textOn=" " />
+
+    <ProgressBar
+        android:id="@+id/app_item_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_item_name"
+        android:layout_marginTop="5dp"
+        android:layout_toStartOf="@id/app_item_togglebutton"
+        android:layout_toEndOf="@id/app_item_image"
+        android:max="100" />
+
+    <TextView
+        android:id="@+id/app_item_rateinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/app_item_progressbar"
+        android:layout_alignTop="@id/app_item_name"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@id/app_item_togglebutton"
+        android:text="@string/rateinfo"
+        android:textColor="#607080" />
+
+</RelativeLayout>

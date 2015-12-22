@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">com.datasummary.LeoDataSummary</string>
+<string name="app_null">   </string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+<string name="appname">appname</string>
+<string name="uid">uid</string>
+<string name="rateinfo">100KB</string>
+<string name="info">As measured by your phone. Your carrier\'s data usage accounting may differ.</string>
+<string name="appcontrol">Network Firewall</string>
+<string name="apprateinfo">Data usage</string>
+<string name="data_summary">Data Summary</string>
+<string name="today">today</string>
+<string name="current_month">Current month =</string>
+</resources>

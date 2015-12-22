@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.datasummary.LeoDataSummary"
+    android:versionCode="1"
+    android:versionName="1.0"
+     android:sharedUserId="android.uid.system">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.DeviceDefault.Light"
+        android:supportsRtl="true"
+       >
+        <receiver android:name="com.datasummary.broadcastreceiver.AppBroadcastReceiver">
+            <intent-filter>
+	    <action android:name="android.intent.action.BOOT_COMPLETED" />
+            
+            <data  android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/data_summary"
+            android:theme="@android:style/Theme.DeviceDefault.Light"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity            
+            android:name="com.datasummary.LeoDataSummary.LenovoDataSummary"
+            android:label="@string/data_summary" 
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.android.settings.SHORTCUT" />
+                <category android:name="codeaurora.intent.filter.settings.multisim.SHORTCUT" />
+            </intent-filter>
+        </activity>
+        
+    </application>
+</manifest>
